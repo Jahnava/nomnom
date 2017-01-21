@@ -1,12 +1,12 @@
 var express = require('express');
-var server = ();
+var server = express();
 
 var port = 8080;
 
 server.get('/', function(request, response){
-  response.sendfile('index.html'),{root: __dirname + '/public/html'})
+  response.sendfile('index.html',{root: __dirname + '/public/html'});
 });
 
 server.listen(port,function(){
-console.log("listening on port");
+console.log('listening on port',port);
 });
